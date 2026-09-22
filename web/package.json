@@ -1,0 +1,24 @@
+{
+  "name": "talent-reels",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1 --port 8789",
+    "build": "next build",
+    "start": "next start --hostname 0.0.0.0 --port 8789",
+    "typecheck": "tsc --noEmit",
+    "test:client": "node --test tests/view-state.test.mjs"
+  },
+  "dependencies": {
+    "next": "16.2.4",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3",
+    "@types/node": "20.19.39",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3"
+  }
+}

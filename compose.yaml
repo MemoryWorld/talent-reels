@@ -1,0 +1,17 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    volumes:
+      - talent-data:/data
+    ports:
+      - '127.0.0.1:8790:8790'
+  web:
+    build: ./web
+    depends_on:
+      - api
+    ports:
+      - '127.0.0.1:8789:8789'
+volumes:
+  talent-data:
